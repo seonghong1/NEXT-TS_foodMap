@@ -3,6 +3,8 @@ import type { Store } from '../types/store';
 import styles from '../styles/detail.module.scss';
 import DetailHeader from '../components/home/DetailHeader';
 import DetailContent from '../components/home/DetailContent';
+import useCurrentStore from '@/hooks/useCurrentStore';
+import Router, { useRouter } from 'next/router';
 
 interface Props {
   store: Store;
@@ -10,13 +12,20 @@ interface Props {
 
 const StoreDetail: NextPage<Props> = ({ store }) => {
   const expanded = true;
-
+  const router = useRouter()
+  const {setCurrentStore} = useCurrentStore()
+  const goMap = ()=>{
+    setCurrentStore(store)
+    router.push(`
+      /?zoom=15&lat=${store.coordinates[0]}&lng=${store.coordinates[1]}
+    `);
+  }
   return (
     <div className={`${styles.detailSection} ${styles.expanded}`}>
       <DetailHeader
         currentStore={store}
         expanded={expanded}
-        onClickArrow={() => null}
+        onClickArrow={() => goMap()}
       />
       <DetailContent currentStore={store} expanded={expanded} />
     </div>

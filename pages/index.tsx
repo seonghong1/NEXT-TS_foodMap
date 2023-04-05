@@ -5,6 +5,7 @@ import Header from '../components/home/Header';
 import { Store } from '../types/store';
 import useStores from '../hooks/useStores';
 import DetailSection from '@/components/home/DetailSection';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   stores: Store[];
@@ -19,6 +20,10 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <Fragment>
+      <NextSeo
+        title='매장지도'
+        description='네이버 맛집 지도를 활용해 맛집을 찾아보세요~'
+      />
       <Header />
       <main style={{ width: '100%', height: '100%', overflow: 'hidden'}}>
         <MapSection />
