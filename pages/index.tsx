@@ -23,6 +23,7 @@ const Home: NextPage<Props> = ({ stores }) => {
       <NextSeo
         title='매장지도'
         description='네이버 맛집 지도를 활용해 맛집을 찾아보세요~'
+        canonical='https://next-ts-food-map.vercel.app/'
       />
       <Header />
       <main style={{ width: '100%', height: '100%', overflow: 'hidden'}}>

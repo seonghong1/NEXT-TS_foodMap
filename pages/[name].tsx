@@ -4,6 +4,7 @@ import styles from '../styles/detail.module.scss';
 import DetailHeader from '../components/home/DetailHeader';
 import DetailContent from '../components/home/DetailContent';
 import useCurrentStore from '@/hooks/useCurrentStore';
+import { NextSeo } from 'next-seo';
 import Router, { useRouter } from 'next/router';
 
 interface Props {
@@ -21,14 +22,21 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
     `);
   }
   return (
-    <div className={`${styles.detailSection} ${styles.expanded}`}>
-      <DetailHeader
-        currentStore={store}
-        expanded={expanded}
-        onClickArrow={() => goMap()}
+    <>
+      <NextSeo
+      title={store.name}
+      description='맛집 상세페이지'
+      canonical={`https://next-ts-food-map.vercel.app/${store.name}`}
       />
-      <DetailContent currentStore={store} expanded={expanded} />
-    </div>
+      <div className={`${styles.detailSection} ${styles.expanded}`}>
+        <DetailHeader
+          currentStore={store}
+          expanded={expanded}
+          onClickArrow={() => goMap()}
+        />
+        <DetailContent currentStore={store} expanded={expanded} />
+      </div>
+    </>
   );
 };
 export default StoreDetail

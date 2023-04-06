@@ -9,6 +9,7 @@ const Feefback = ()=>{
       <NextSeo
         title="피드백"
         description="피드백 페이지"
+        canonical='https://next-ts-food-map.vercel.app/'
       />
       <Header />
     </Fragment>
