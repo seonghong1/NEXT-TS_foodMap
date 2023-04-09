@@ -1,5 +1,5 @@
 # 네이버 맛집 지도 사이
-[[https://seonghong-portfolio.netlify.app/](http://localhost:3000/)](https://next-ts-food-map.vercel.app/)
+https://next-ts-food-map.vercel.app/
 
 # 사용기술
 - Next.js
