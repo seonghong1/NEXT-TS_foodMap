@@ -14,7 +14,7 @@ const HeaderComponent = ({ onClickLogo, rightElements }: Props) => {
       <div className={styles.flexItem}>
         <Link href="/" onClick={onClickLogo} className={styles.box} aria-label='홈으로 이동'>
           <Image
-            src="/inflearn.png"
+            src="/naver_logo.png"
             width={110}
             height={20}
             alt="인프런 로고"
