@@ -1,4 +1,4 @@
-# 네이버 맛집 지도 사이
+# 🥘네이버 맛집 지도 사이트🥘
 https://next-ts-food-map.vercel.app/
 
 # 사용기술
