@@ -1,2 +1,20 @@
-네이버 맛집 지도 서비스 입니다 !
-배포주소 : https://next-ts-food-map.vercel.app/
+# 네이버 맛집 지도 사이
+[[https://seonghong-portfolio.netlify.app/](http://localhost:3000/)](https://next-ts-food-map.vercel.app/)
+
+# 사용기술
+- Next.js
+- Typescript
+- SWR
+- Sass
+
+
+<!-- # 간단한 설명
+
+
+# 느낀점, 알게된점, 나의 생각 -->
+
+
+
+
+
+
